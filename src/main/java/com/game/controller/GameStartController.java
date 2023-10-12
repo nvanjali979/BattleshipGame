@@ -14,18 +14,22 @@ import com.game.exceptions.GameException;
 import com.game.io.Coordinates;
 import com.game.io.Ship;
 import com.game.service.GameStartService;
+import com.game.service.impl.GameStartServiceImpl;
 
 @RequestMapping("/game")
 @RestController
 public class GameStartController {
 
-	private GameStartService gameStartService = new GameStartService();
+	private GameStartService gameStartService = new GameStartServiceImpl();
 
 	@PostMapping("/placeShip/{player}")
 	public ResponseEntity<String> startGame(@PathVariable("player") String playerName, @RequestBody List<Ship> ships) {
+
 		try {
-			gameStartService.begin(ships, playerName);
-			return ResponseEntity.status(HttpStatus.OK).body("");
+			if (gameStartService.begin(ships, playerName))
+				return ResponseEntity.status(HttpStatus.OK).body("Successfully placed the ship");
+			else
+				throw new GameException();
 		} catch (GameException e) {
 			return ResponseEntity.badRequest().body(e.toString());
 		}

@@ -4,6 +4,7 @@ public class Game {
 
 	private Player playerOne;
 	private Player playerTwo;
+	private String status;
 
 	public Game() {
 		playerOne = new Player("playerOne"); // remove name if not needed
@@ -24,6 +25,14 @@ public class Game {
 
 	public void setPlayerTwo(Player playerTwo) {
 		this.playerTwo = playerTwo;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }

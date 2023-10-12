@@ -2,14 +2,14 @@ package com.game.io;
 
 public class Coordinates {
 
-	private int row;
+	private char row;
 	private int col;
 
-	public int getRow() {
+	public char getRow() {
 		return row;
 	}
 
-	public void setRow(int row) {
+	public void setRow(char row) {
 		this.row = row;
 	}
 
@@ -21,7 +21,7 @@ public class Coordinates {
 		this.col = col;
 	}
 
-	public Coordinates(int row, int col) {
+	public Coordinates(char row, int col) {
 		this.row = row;
 		this.col = col;
 	}

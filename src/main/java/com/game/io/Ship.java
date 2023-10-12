@@ -6,8 +6,8 @@ public class Ship {
 
 	private String name;
 	private int size;
-	private String dir;
-	private int row;
+	private char dir;
+	private char row;
 	private int col;
 	private int shipsLeft;
 	private List<Coordinates> coordinatesList;
@@ -28,19 +28,19 @@ public class Ship {
 		this.size = size;
 	}
 
-	public String getDir() {
+	public char getDir() {
 		return dir;
 	}
 
-	public void setDir(String dir) {
+	public void setDir(char dir) {
 		this.dir = dir;
 	}
 
-	public int getRow() {
+	public char getRow() {
 		return row;
 	}
 
-	public void setRow(int row) {
+	public void setRow(char row) {
 		this.row = row;
 	}
 
@@ -66,6 +66,15 @@ public class Ship {
 
 	public void setCoordinatesList(List<Coordinates> coordinatesList) {
 		this.coordinatesList = coordinatesList;
+	}
+
+	public Ship(String name, int size, char dir, char row, int col) {
+		super();
+		this.name = name;
+		this.size = size;
+		this.dir = dir;
+		this.row = row;
+		this.col = col;
 	}
 
 }
