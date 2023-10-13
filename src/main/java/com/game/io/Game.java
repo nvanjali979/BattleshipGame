@@ -1,5 +1,8 @@
 package com.game.io;
 
+/**
+ * Game class holds the player objects and the gamestatus
+ */
 public class Game {
 
 	private Player playerOne;

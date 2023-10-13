@@ -2,6 +2,9 @@ package com.game.io;
 
 import java.util.List;
 
+/**
+ * Ship details in the request are mapped to this class
+ */
 public class Ship {
 
 	private String name;

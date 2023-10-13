@@ -1,5 +1,8 @@
 package com.game.io;
 
+/**
+ * Holds information about the Board Coordinate
+ */
 public class Coordinates {
 
 	private char row;

@@ -1,0 +1,37 @@
+[
+   {
+      "name": "Aircraft Carrier",
+      "size": 5,
+      "dir": "V",
+      "row": "B",
+      "col": 5
+   },
+   {
+      "name": "Battleship",
+      "size": 4,
+      "dir": "V",
+      "row": "C",
+      "col": 2
+   },
+   {
+      "name": "Cruiser",
+      "size": 3,
+      "dir": "H",
+      "row": "H",
+      "col": 7
+   },
+   {
+      "name": "Submarine",
+      "size": 3,
+      "dir": "V",
+      "row": "H",
+      "col": 1
+   },
+   {
+      "name": "Destroyer",
+      "size": 2,
+      "dir": "H",
+      "row": "H",
+      "col": 5
+   }
+]

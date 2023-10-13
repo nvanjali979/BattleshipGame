@@ -1,5 +1,8 @@
 package com.game.exceptions;
 
+/**
+ * Description : GameException defined for handling invalid coordinate scenario
+ */
 public class GameException extends Exception {
 
 	String message;

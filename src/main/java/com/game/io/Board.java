@@ -2,6 +2,11 @@ package com.game.io;
 
 import java.util.List;
 
+/**
+ * Description : Board class is defined for each player
+ * It has grid object which holds a 2d array of string
+ * to denote if it can contain a default value X, ship name or the ship Status 
+ */
 public class Board {
 
 	private String[][] grid; // X/SHIPNAME/HIT/MISS/SUNK

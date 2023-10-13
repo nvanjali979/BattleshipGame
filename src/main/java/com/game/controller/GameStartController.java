@@ -16,12 +16,25 @@ import com.game.io.Ship;
 import com.game.service.GameStartService;
 import com.game.service.impl.GameStartServiceImpl;
 
+
+/**
+ *  Description : Controller class that handles the placeShip and shoot APIs 
+ */
 @RequestMapping("/game")
 @RestController
 public class GameStartController {
 
 	private GameStartService gameStartService = new GameStartServiceImpl();
 
+	/**
+	 *  Invokes the begin method from gameStartService 
+	 *  and returns a success message if ships are placed successfully
+	 *  else throws an Exception
+	 *  
+	 * @param playerName - playerName from the URL
+	 * @param ships - List of ships from the Request is mapped to this object
+	 * @return - ResponseEntity. 
+	 */
 	@PostMapping("/placeShip/{player}")
 	public ResponseEntity<String> startGame(@PathVariable("player") String playerName, @RequestBody List<Ship> ships) {
 
@@ -35,6 +48,15 @@ public class GameStartController {
 		}
 	}
 
+	/**
+	 *  Invokes the shootBoard method from gameStartService 
+	 *  and returns a corresponding message if ships are hit,missed or sunk
+	 *  Throws an Exception if the coordinate is an invalid one 
+	 *  
+	 * @param playerName - playerName from the URL
+	 * @param coordinates - Coordinates are passed in the request in the form of row and column
+	 * @return ResponseEntity
+	 */
 	@PostMapping("/shoot/{player}")
 	public ResponseEntity<String> shoot(@PathVariable("player") String playerName,
 			@RequestBody Coordinates coordinates) {
