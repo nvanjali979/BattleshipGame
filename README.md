@@ -19,4 +19,5 @@ Sample Request location : https://github.com/nvanjali979/Project1/edit/main/Docs
 Sample Request location : https://github.com/nvanjali979/Project1/edit/main/Docs/SampleShootRequest
 
 Basic Authentication is implemented.
-Authorisation header needs to be passed along with the request
+
+Authorization header needs to be passed along with the request
