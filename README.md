@@ -20,4 +20,4 @@ Sample Request location : https://github.com/nvanjali979/Project1/edit/main/Docs
 
 Basic Authentication is implemented.
 
-Authorization header needs to be passed along with the request
+Authorizationn header needs to be passed along with the request
